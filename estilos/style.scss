@@ -1,0 +1,507 @@
+/* KeyFrames */
+@-webkit-keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@-moz-keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+html {
+    background: black;
+    margin: 0px;
+}
+
+.kandisky--body {
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+}
+
+.kandisky--container {
+    width: 600px;
+    height: 97vh;
+    background: rgb(247, 241, 133);
+    background: linear-gradient(129deg, rgba(247, 241, 133, 0.9051995798319328) 4%, rgba(255, 255, 255, 1) 32%);
+    border: 10px solid white;
+    position: relative;
+    overflow: hidden;
+    transition: all 4s ease-in-out 1s;
+}
+
+.kandisky--container:hover {
+    background: rgb(6, 18, 60);
+    background: linear-gradient(129deg, rgba(6, 18, 60, 0.9472163865546218) 4%, rgba(255, 255, 255, 1) 32%);
+
+}
+
+
+.cloud--part1,
+.cloud--part2,
+.cloud--part3,
+.cloud--part4 {
+    border-radius: 100% 0 100% 100%;
+    background: rgb(244, 0, 218);
+    background: -webkit-linear-gradient(29deg, rgba(244, 0, 218, 0.686712) 0%, rgba(161, 223, 228, 0.599877) 40%, rgba(114, 29, 182, 0.823967) 81%);
+    background-size: 200% 200%;
+    position: absolute;
+    box-shadow: -42px -1px 38px #a64175;
+    z-index: 10;
+    animation: gradient-animation 4s ease infinite;
+}
+
+.cloud--part1 {
+    right: -2px;
+    top: -40px;
+    width: 250px;
+    height: 150px;
+}
+
+.cloud--part2 {
+    top: 20px;
+    width: 185px;
+    height: 136px;
+    right: -1px;
+}
+
+.cloud--part3 {
+    top: 63px;
+    right: -141px;
+    width: 250px;
+    height: 217px;
+    z-index: 4;
+}
+
+.cloud--part4 {
+    top: 70px;
+    width: 155px;
+    height: 150px;
+    right: -2px;
+}
+
+//CIRUCULOS NEGRO Y BLANCO
+.circle--dark {
+    background: black;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    left: 71px;
+    transition: box-shadow 0.8s linear 0.2s;
+}
+
+.circle--dark:hover {
+    box-shadow: 19px -1px 2px #fff;
+}
+
+
+.circle--white {
+    background: #fcfac5;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    top: 111px;
+    right: 59px;
+    z-index: 1;
+    box-shadow: -9px 2px 13px #928b00;
+    z-index: 12;
+    filter: blur(2px)
+}
+
+.square--dark {
+    background: black;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 11;
+}
+
+//LINEAS HORIZONTALES
+.lines--container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 234px;
+    left: 28px;
+}
+
+.lines--container__one,
+.lines--container__two,
+.lines--container__three,
+.lines--container__four,
+.lines--container__five {
+    border: 2.5px solid black;
+    height: 0.2px;
+    width: 40px;
+    margin-bottom: 5px;
+}
+
+//SEMICIRCULOS HORIZONTALES
+.semicircle--horizontal__one,
+.semicircle--horizontal__two,
+.semicircle--horizontal__three {
+    position: absolute;
+    top: 204px;
+    height: 243px;
+    width: 127px;
+    border-radius: 400px 0 0 400px;
+    border: 1px solid black;
+    transition: right 0.8s linear 0.2s;
+}
+
+.semicircle--horizontal__one {
+    background: rgb(238, 222, 101);
+    right: -78px;
+    z-index: 2;
+    box-shadow: -9px -1px 38px #a42206;
+}
+
+.semicircle--horizontal__one:hover {
+    right: -100px;
+}
+
+.semicircle--horizontal__two {
+    background: rgb(232, 80, 47);
+    right: -38px;
+    z-index: 1;
+    box-shadow: -22px -18px 36px #145978;
+}
+
+.semicircle--horizontal__two:hover {
+    right: -50px;
+}
+
+.semicircle--horizontal__three {
+    background: #8dadee;
+    right: -3px;
+}
+
+.semicircle--horizontal__three:hover {
+    right: -15px;
+}
+
+//FIN DE SEMICIRCULOS HORIZONTALES
+
+//TRIANGULOS AMARILLO-ROJO-AZUL
+.triangle--container {
+    position: relative;
+}
+
+.triangle--yellow,
+.triangle--red,
+.triangle--blue {
+    width: 0;
+    height: 0;
+    border-right: 90px solid transparent;
+    border-top: 50px solid transparent;
+    border-left: 41px solid transparent;
+    position: absolute;
+    left: 164px;
+}
+
+.triangle--yellow {
+    border-bottom: 79px solid #ede50f;
+    top: 47px;
+}
+
+.triangle--yellow:hover,
+.triangle--red:hover,
+.triangle--blue:hover {
+    border-bottom: 79px solid black;
+}
+
+.triangle--red {
+    border-bottom: 79px solid #f04e4e;
+    top: 90px;
+}
+
+.triangle--blue {
+    border-bottom: 79px solid #4e59f0;
+    top: 132px;
+}
+
+//LINEAS TRANSVERSALES
+
+.cross--line__one {
+    width: 555px;
+    height: 34px;
+    transform: rotate(-56deg);
+    position: absolute;
+    left: -67px;
+    top: 285px;
+    background: #fff5a987;
+    box-shadow: 19px 10px 40px #c21e1e;
+    z-index: 5;
+}
+
+.cross--line__one:hover {
+    background: #eff225c6;
+    box-shadow: 19px 10px 40px #cc0101;
+}
+
+.cross--line__two {
+    width: 678px;
+    height: 34px;
+    transform: rotate(-56deg);
+    position: absolute;
+    left: -151px;
+    top: 344px;
+    background: #fff5a987;
+    box-shadow: 16px -4px 40px #c21e1e;
+    z-index: 6;
+}
+
+.cross--line__two:hover {
+    background: #f7a817dc;
+    box-shadow: 16px -4px 40px #ebe302;
+}
+
+.cross--line__three {
+    width: 678px;
+    height: 34px;
+    transform: rotate(-53deg);
+    position: absolute;
+    left: -138px;
+    top: 345px;
+    background: #f2ebb4a3;
+    box-shadow: 32px -3px 33px #1e0000;
+    z-index: 7;
+}
+
+.cross--line__three:hover {
+    background: #f22727ee;
+    box-shadow: 32px -3px 33px #eb7405;
+}
+
+.cross--line__four {
+    width: 678px;
+    height: 34px;
+    transform: rotate(-51deg);
+    position: absolute;
+    left: -116px;
+    top: 353px;
+    background: #f2ebb4a3;
+    box-shadow: 32px 3px 33px #c21e1e;
+    z-index: 8;
+}
+
+.cross--line__four:hover {
+    background: #f0d612;
+    box-shadow: 32px 3px 33px #e86914;
+}
+
+.cross--line__five {
+    width: 678px;
+    height: 34px;
+    transform: rotate(-48deg);
+    position: absolute;
+    left: -94px;
+    top: 353px;
+    background: #f2cfb4a3;
+    box-shadow: 32px -5px 18px #db722c;
+    z-index: 9;
+}
+
+.cross--line__five:hover {
+    background: #eb770c;
+    box-shadow: 32px -5px 18px #ee1919;
+}
+
+.cross--line__six,
+.cross--line__seven,
+.cross--line__eight {
+    width: 678px;
+    height: 12px;
+    transform: rotate(-48deg);
+    position: absolute;
+    top: 353px;
+    background: #ffff00b3;
+    box-shadow: 32px -5px 8px #252416;
+}
+
+.cross--line__six {
+    left: -50px;
+}
+
+.cross--line__seven {
+    left: -35px;
+}
+
+.cross--line__eight {
+    left: -17px;
+}
+
+//PIE CHART CIRCULO
+
+.piechart--container {
+    position: absolute;
+    bottom: 39px;
+    left: 161px;
+}
+
+.piechart--circle1,
+.piechart--circle2 {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+.piechart--circle1 {
+    background: #305791;
+    width: 70px;
+    height: 70px;
+}
+
+.piechart--circle2 {
+    background: #ee791f;
+    width: 60px;
+    height: 60px;
+}
+
+.pie--chart {
+    width: 0;
+    height: 0;
+    border-right: 25px solid #dfc326;
+    border-top: 25px solid #428bca;
+    border-left: 25px solid #dfc326;
+    border-bottom: 25px solid #428bca;
+    border-radius: 100%;
+}
+
+.pie--chart:hover {
+    border-right: 25px solid #428bca;
+    border-top: 25px solid #dfc326;
+    border-left: 25px solid #428bca;
+    border-bottom: 25px solid #dfc326;
+}
+
+//FINAL PIE CHART CIRCULO
+
+//SEMICIRCULO CON TRIANGULO
+
+.form--container {
+    position: absolute;
+    bottom: 110px;
+    right: 260px;
+}
+
+.semicircle--yellow {
+    width: 50px;
+    height: 100px;
+    border: 1px solid black;
+    background: #dfc326;
+    border-radius: 0 100px 100px 0;
+    transform: rotate(110deg);
+    display: flex;
+    align-items: center;
+    transition: transform 0.5s linear 0.2s;
+}
+
+.semicircle--yellow:hover {
+    transform: rotate(-63deg)
+}
+
+.little--circle__black {
+    background: black;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    right: 17px;
+}
+
+.little--triangle__red {
+    width: 0;
+    height: 0;
+    border-right: 15px solid transparent;
+    border-top: 15px solid transparent;
+    border-left: 15px solid transparent;
+    border-bottom: 15px solid #fa0909;
+    transform: rotate(-88deg);
+    position: absolute;
+    right: 13px;
+    bottom: 1px;
+}
+
+//SEMICIRCULO IZQUIERDA BOTTOM
+.semicircle--left {
+    background: rgb(155, 194, 235);
+    background: linear-gradient(45deg, rgba(155, 194, 235, 1) 0%, rgba(39, 69, 103, 0.9416141456582633) 40%);
+    height: 209px;
+    border-radius: 0 100% 0 0;
+    width: 130px;
+    position: absolute;
+    left: -3px;
+    bottom: -3px;
+    border: 3px solid black;
+    z-index: 10;
+    transition: box-shadow 0.5s linear 0.2s;
+}
+
+.semicircle--left:hover {
+    box-shadow: 19px 4px 17px #34416b;
+}
+
+//SEMICIRCULO DERECHA BOTTOM
+.semicircle--right {
+    height: 170px;
+    border-radius: 100% 0 0 0;
+    width: 230px;
+    position: absolute;
+    right: -4px;
+    bottom: -4px;
+    border-style: double;
+    border-width: 4px;
+    background: rgb(88, 111, 68);
+    background: radial-gradient(circle, rgba(88, 111, 68, 1) 13%, rgba(168, 233, 148, 1) 100%);
+    transition: box-shadow 0.5s linear 0.2s;
+
+}
+
+.semicircle--right:hover {
+    box-shadow: -14px -1px 17px #586f44;
+}
